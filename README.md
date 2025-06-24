@@ -13,9 +13,9 @@ This project demonstrates the development of a Retrieval-Augmented Generation (R
 
 ## Key Features
 
-- Crawler to download IRS HTML documents up to 2 levels deep
+- Crawler to download HTML documents (IRS IRM)
 - HTML parsing using BeautifulSoup
-- Intelligent text chunking using sentence boundaries (or custom logic)
+- Intelligent text chunking using sentence boundaries
 - Embedding generation using Vertex AI or other models
 - Pinecone integration for vector search
 - LLM-based query answering via Gemini or text-bison
@@ -56,23 +56,11 @@ This project demonstrates the development of a Retrieval-Augmented Generation (R
 - ipywidgets
 - tqdm
 
-## File Structure
-
-```
-Anika_IRS_AI_Chatbot.ipynb      # Main notebook with full implementation
-documents/                      # Cleaned and chunked text files (optional)
-data/                           # Raw HTML or parsed intermediate outputs
-utils/                          # Custom functions (if modularized)
-```
-
 ## Setup Instructions
 
 1. **Environment**
    - Run the notebook in Google Colab (recommended)
-   - Install dependencies:
-     ```bash
-     pip install -qU beautifulsoup4 google-cloud-storage pinecone-client langchain ipywidgets
-     ```
+   - Install dependencies
 
 2. **Google Cloud**
    - Enable Vertex AI and Storage APIs
@@ -102,7 +90,6 @@ These tests ensure that the chatbot can correctly find and cite relevant context
 
 - Only public documents are supported
 - Gemini model must be accessed through supported Vertex AI APIs
-- Limited to 100 HTML files and 2 crawling levels for demonstration
 
 ## Author
 
